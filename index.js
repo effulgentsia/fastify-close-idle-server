@@ -2,7 +2,7 @@
 
 const fp = require('fastify-plugin')
 
-const fastifyIdleServerShutdown = fp(function (fastify, opts, done) {
+const fastifyCloseIdleServer = fp(function (fastify, opts, done) {
   const delay = opts.delay || 60000
   const close = opts.closeFunction || fastify.close.bind(fastify)
 
@@ -50,6 +50,6 @@ const fastifyIdleServerShutdown = fp(function (fastify, opts, done) {
   done()
 })
 
-module.exports = fastifyIdleServerShutdown
-module.exports.default = fastifyIdleServerShutdown
-module.exports.fastifyIdleServerShutdown = fastifyIdleServerShutdown
+module.exports = fastifyCloseIdleServer
+module.exports.default = fastifyCloseIdleServer
+module.exports.fastifyIdleServerShutdown = fastifyCloseIdleServer
