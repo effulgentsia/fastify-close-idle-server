@@ -19,5 +19,5 @@
   "homepage": "https://github.com/effulgentsia/fastify-close-idle-server#readme",
   "dependencies": {
     "fastify-plugin": "*"
-  },
+  }
 }
