@@ -18,7 +18,7 @@ fastify.register(require('fastify-close-idle-server'))
 fastify.listen({ port: 3000 })
 ```
 
-To specify a different amount of idle time allowed before closing the server, set the `delay` option in milliseconds. For example, to close the server after 30 seconds of idle time:
+To specify a different amount of idle time to wait before closing the server, set the `delay` option in milliseconds. For example, to close the server after 30 seconds of idle time:
 ```
 fastify.register(require('fastify-close-idle-server'), {
   delay: 30000
